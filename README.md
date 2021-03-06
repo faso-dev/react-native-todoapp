@@ -1,7 +1,7 @@
 # react-native-todoapp
 Une application basique de getsion des tâches
 
-# Intallation
+# Cloner le repo
 
 ```shell
 git clone https://github.com/faso-dev/react-native-todoapp.git
