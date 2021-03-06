@@ -1,15 +1,21 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Platform, View, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard} from 'react-native';
 import TodoComponent from "./src/compenents/TodoComponent";
 
 export default function App() {
     return (
-        <View style={{
-            marginTop: 40,
-            backgroundColor: '#fff'
-        }}>
-            <TodoComponent/>
-        </View>
+        <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+        >
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={{
+                    marginTop: 40,
+                    backgroundColor: '#fff'
+                }}>
+                    <TodoComponent/>
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
     );
 }
 

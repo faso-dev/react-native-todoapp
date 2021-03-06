@@ -45,7 +45,7 @@ const TodoComponent = () => {
             todo.name = newName
             const tmpTodos = todos
             tmpTodos[todoIndex] = todo
-            setTodos(tmpTodos)
+            setTodos(() => [...[], ...tmpTodos])
 
             Alert.alert(
                 "Message de succès",
@@ -62,7 +62,7 @@ const TodoComponent = () => {
             todo.status = true
             const tmpTodos = todos
             tmpTodos.splice(todoIndex, 1, todo)
-            setTodos(tmpTodos)
+            setTodos(() => [...[], ...tmpTodos])
             Alert.alert(
                 "Message de succès",
                 `La tâche ${todo.name} a bien été marquée terminée`)
@@ -157,7 +157,6 @@ const TodoComponent = () => {
                 markTodoAsDone={markTodoAsDone}
             />
         </>
-
     );
 }
 
