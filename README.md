@@ -4,7 +4,7 @@ Une application basique de getsion des tâches
 # Intallation
 
 ```shell
-git clone 
+git clone https://github.com/faso-dev/react-native-todoapp.git
 ```
 # Installation des dépendances
 
